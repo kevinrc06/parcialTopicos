@@ -7,9 +7,9 @@ La aplicación permite calcular el tiempo de trabajo independiente que un estudi
 
 ## Características
 
-- Ingreso del nombre de la materia.
-- Registro de horas teóricas y prácticas.
-- Ingreso de numero de creditos.
+- Se debe ingresar del nombre de la materia.
+- Se debe ingresar las horas teóricas y prácticas.
+- Se debe ingresar de numero de creditos.
 
 ## Requisitos
 
