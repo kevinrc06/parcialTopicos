@@ -4,3 +4,14 @@ Este proyecto forma parte del primer previo de la asignatura Tópicos. Su finali
 ## Descripción
 
 La aplicación permite calcular el tiempo de trabajo independiente que un estudiante debe dedicar a una materia. Los usuarios ingresan el nombre de la materia, horas teóricas, horas prácticas y el número de créditos, y la aplicación calcula automáticamente el tiempo recomendado de trabajo independiente.
+
+## Características
+
+- Ingreso del nombre de la materia.
+- Registro de horas teóricas y prácticas.
+- Ingreso de numero de creditos.
+
+## Requisitos
+
+- **SDK mínimo**: 24 (Android 7.0)
+- **Versión de Android mínima**: 7.0
