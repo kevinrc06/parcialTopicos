@@ -21,7 +21,7 @@ La aplicación permite calcular el tiempo de trabajo independiente que un estudi
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tuusuario/calculo-trabajo-independiente.git
+   git clone https://github.com/kevinrc06/parcialTopicos.git
 2. Abre el proyecto en Android Studio.
 3. Sincroniza con Gradle y asegúrate de que todas las dependencias estén instaladas correctamente.
 4. Ejecuta el proyecto en un dispositivo o emulador con Android 7.0 o superior.
