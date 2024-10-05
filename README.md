@@ -23,7 +23,7 @@ La aplicación permite calcular el tiempo de trabajo independiente que un estudi
  trabajo independiente del semestre = 16,
 
 
-Horas por créditos = Número de creditos * 48, 
+Horas por créditos = Número de creditos * 48
 
  
 Horas presenciales = (horas teóricas + horas prácticas) * trabajo independiente del semestre
