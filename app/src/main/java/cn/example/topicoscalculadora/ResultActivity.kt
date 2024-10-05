@@ -2,6 +2,7 @@ package cn.example.topicoscalculadora
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
@@ -13,7 +14,12 @@ class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
-        var numeroCredito : TextView = findViewById(R.id.numeroCredito)
+        var tvTrabajoIndependiente : TextView = findViewById(R.id.trabajoIndependiente)
+        var tvMateria : TextView = findViewById(R.id.materia)
+        var tvHorasTeoricas : TextView = findViewById(R.id.tvHorasTeorica2)
+        var tvHorasPracticas : TextView = findViewById(R.id.tvHorasPracticas2)
+        var tvCreditos : TextView = findViewById(R.id.tvnumeroCreditos)
+        var regresar : Button = findViewById(R.id.regresar)
 
         enableEdgeToEdge()
 
@@ -24,9 +30,22 @@ class ResultActivity : AppCompatActivity() {
         }
 
         var trabajoIndependiente : Int? = intent.extras?.getInt("trabajoIndependiente")
+        var horasTeoricas : Int? = intent.extras?.getInt("horasTeoricas")
+        var horasPracticas : Int? = intent.extras?.getInt("horasPracticas")
+        var materia = intent.extras?.getString("materia")
+        var creditos = intent.extras?.getString("creditos")
 
 
-        numeroCredito.text = trabajoIndependiente.toString()
+        tvTrabajoIndependiente.text = trabajoIndependiente.toString()
+        tvMateria.text = materia
+        tvHorasTeoricas.text = horasTeoricas.toString()
+        tvHorasPracticas.text = horasPracticas.toString()
+        tvCreditos.text = creditos
+
+
+        regresar.setOnClickListener {
+            finish()
+        }
 
     }
 }

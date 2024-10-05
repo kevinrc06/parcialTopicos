@@ -5,15 +5,189 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/result"
+    android:background="@color/background"
     tools:context=".ResultActivity">
 
+    <FrameLayout
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/roud_background"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo_vertical" />
+    </FrameLayout>
+
     <TextView
-        android:id="@+id/numeroCredito"
+        android:id="@+id/resultado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        tools:text="prueba" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:text="@string/result"/>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/general"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/resultado">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardHT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/background_card"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/general">
+
+            <TextView
+                android:id="@+id/materia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                tools:text="BASE DE DATOS"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:text="@string/horasTeoricas"
+                    />
+                <TextView
+                    android:id="@+id/tvHorasTeorica2"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    tools:text="10"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="90dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:text="@string/horasPracticas"
+                    />
+                <TextView
+                    android:id="@+id/tvHorasPracticas2"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    tools:text="10"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:text="@string/creditos"
+                    />
+                <TextView
+                    android:id="@+id/tvnumeroCreditos"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    tools:text="10"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="170dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:text="@string/trabajoIndependiente"
+                    android:padding="4dp"
+                    android:layout_marginBottom="5dp"
+                    />
+                <TextView
+                    android:id="@+id/trabajoIndependiente"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="150dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    tools:text="10"
+                    android:padding="4dp"
+                    android:layout_marginBottom="5dp"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/regresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/regresar"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/general"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

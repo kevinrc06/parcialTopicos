@@ -4,5 +4,12 @@
     <string name="ht">Horas Teóricas</string>
     <string name="hp">Horas Práctica</string>
     <string name="credit">Cantidad de créditos</string>
-    <string name="calculate">Calcular</string>
+    <string name="calculate">CALCULAR</string>
+    <string name="titulo">CALCULADORA TRABAJO INDEPENDIENTE</string>
+    <string name="result">RESULTADO</string>
+    <string name="horasTeoricas">Horas teoricas: </string>
+    <string name="horasPracticas">Horas practicas: </string>
+    <string name="creditos">Creditos: </string>
+    <string name="trabajoIndependiente">Trabajo Independiente:</string>
+    <string name="regresar">REGRESAR</string>
 </resources>

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -82,13 +83,18 @@ class MainActivity : AppCompatActivity() {
             }
         }
         buttonCalcular.setOnClickListener {
-            var creditos : String = etCreditos.text.toString()
-            var horasPorCreditos : Int = (creditos.toInt() * 48)
-            var horasPresenciales : Int = ((ht+hp)*16)
-            var trabajoIndependiente :  Int = ((horasPorCreditos-horasPresenciales)/16)
-            val intent = Intent(this,ResultActivity::class.java)
-            intent.putExtra("trabajoIndependiente",trabajoIndependiente)
-            startActivity(intent)
+            if (etMateria.text.isEmpty()) {
+                Toast.makeText(this, "DEBE INGRESAR NOMBRE DE LA MATERIA", Toast.LENGTH_SHORT)
+                    .show()
+            } else if ((etCreditos.text.isEmpty()) || (etCreditos.text.equals("0"))) {
+                Toast.makeText(
+                    this,
+                    "DEBE INGRESAR NUMERO DE CREDITOS, NO PUEDE SER 0",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                calcularTrabajoIndependiente()
+            }
         }
     }
 
@@ -97,5 +103,19 @@ class MainActivity : AppCompatActivity() {
     }
     private fun setHP(){
         tvHorasPractica.text = hp.toString()
+    }
+
+    private fun calcularTrabajoIndependiente() {
+        var creditos = etCreditos.text.toString()
+        var horasPorCreditos = (creditos.toInt() * 48)
+        var horasPresenciales = ((ht + hp) * 16)
+        var trabajoIndependiente = ((horasPorCreditos - horasPresenciales) / 16)
+        val intent = Intent(this, ResultActivity::class.java)
+        intent.putExtra("trabajoIndependiente", trabajoIndependiente)
+        intent.putExtra("materia", etMateria.text.toString())
+        intent.putExtra("creditos", creditos)
+        intent.putExtra("horasTeoricas", ht)
+        intent.putExtra("horasPracticas", hp)
+        startActivity(intent)
     }
 }
