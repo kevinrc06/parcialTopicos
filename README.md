@@ -7,7 +7,7 @@ La aplicación permite calcular el tiempo de trabajo independiente que un estudi
 
 ## Características
 
-- Se debe ingresar del nombre de la materia.
+- Se debe ingresar el nombre de la materia.
 - Se debe ingresar las horas teóricas y prácticas.
 - Se debe ingresar de numero de creditos.
 
@@ -15,3 +15,13 @@ La aplicación permite calcular el tiempo de trabajo independiente que un estudi
 
 - **SDK mínimo**: 24 (Android 7.0)
 - **Versión de Android mínima**: 7.0
+
+
+## Instalación
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/tuusuario/calculo-trabajo-independiente.git
+2. Abre el proyecto en Android Studio.
+3. Sincroniza con Gradle y asegúrate de que todas las dependencias estén instaladas correctamente.
+4. Ejecuta el proyecto en un dispositivo o emulador con Android 7.0 o superior.
