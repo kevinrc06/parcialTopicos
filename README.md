@@ -1,2 +1,6 @@
 # parcialTopicos
-El proyecto corresponde al primer parcial de la materia de topicos, donde se trabajo con el lenguaje kotlin y el diseño de interfaces en xml
+Este proyecto forma parte del primer previo de la asignatura Tópicos. Su finalidad es calcular el tiempo de trabajo independiente para una materia universitaria, tomando como entrada ciertas variables como el nombre de la materia, horas teóricas, horas prácticas y el número de créditos.
+
+## Descripción
+
+La aplicación permite calcular el tiempo de trabajo independiente que un estudiante debe dedicar a una materia. Los usuarios ingresan el nombre de la materia, horas teóricas, horas prácticas y el número de créditos, y la aplicación calcula automáticamente el tiempo recomendado de trabajo independiente.
